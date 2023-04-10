@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Hankin\LaravelComment;
 
 use Illuminate\Support\ServiceProvider;
 
