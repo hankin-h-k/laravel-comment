@@ -8,11 +8,6 @@ trait HasComments
 {
     public function comments(): MorphMany
     {
-        return $this->morphMany(config('remark.model'), 'commentable');
+        return $this->morphMany(config('comment.model'), 'commentable');
     }
-
-//    public function primaryId(): string
-//    {
-//        return (string)$this->getAttribute($this->primaryKey);
-//    }
 }

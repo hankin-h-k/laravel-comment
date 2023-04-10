@@ -7,27 +7,22 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait CanComment
 {
-    public function comment(CommentAble $remarkable, $content, $stars=null, $pics=[]):Comment
+    public function comment(Commentable $commentable, $content, $stars=null, $pics=[]):Comment
     {
-        $remarkModel = config('comment.model');
-        $remark = new $remarkModel([
+        $commentModel = config('comment.model');
+        $comment = new $commentModel([
             'content'       =>  $content,
             'pics'          =>  json_encode($pics),
             'start'         => $stars,
             'remarked_id'   => (string)$this->getAttribute($this->primaryKey),
             'remarked_type' => get_class(),
         ]);
-        $remarkable->comments()->save($remark);
-        return $remark;
+        $commentable->comments()->save($comment);
+        return $comment;
     }
 
     public function comments(): MorphMany
     {
         return $this->morphMany(config('comment.model'), 'commented');
     }
-
-//    private function primaryId(): string
-//    {
-//        return (string)$this->getAttribute($this->primaryKey);
-//    }
 }
