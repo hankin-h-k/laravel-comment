@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'model' => \Hankin\LaravelComment\Models\Remark::class,
+    'model' => \Hankin\LaravelComment\Models\Comment::class,
 ];

@@ -22,7 +22,7 @@ class CreateCommentsTable extends Migration
             $table->string('commented_type')->nullable();
             $table->index(['commented_id', 'commented_type']);
             $table->longText('content')->nullable();
-            $table->float('star', 2,1)->nullable();
+            $table->float('stars', 2,1)->nullable();
             $table->text('pics')->nullable();
             $table->timestamps();
         });
