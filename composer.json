@@ -1,0 +1,28 @@
+{
+    "name": "hankin/laravel-comment",
+    "type": "library",
+    "description": "Just another comment system for your laravel project",
+    "keywords": [
+        "hankin",
+        "laravel-comment",
+        "comment"
+    ],
+    "homepage": "https://github.com/hankin-h-k/laravel-comment",
+    "license": "MIT",
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Hankin\\LaravelComment\\": "packages/hankin/LaravelComment/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hankin",
+            "email": "hankin_h@126.com"
+        }
+    ],
+    "require": {}
+}
