@@ -21,6 +21,9 @@ class CreateCommentsTable extends Migration
             $table->string('commented_id')->nullable();
             $table->string('commented_type')->nullable();
             $table->index(['commented_id', 'commented_type']);
+            $table->string('dependable_id')->nullable();
+            $table->string('dependable_type')->nullable();
+            $table->index(['dependable_id', 'dependable_type']);
             $table->longText('content')->nullable();
             $table->float('stars', 2,1)->nullable();
             $table->text('pics')->nullable();
